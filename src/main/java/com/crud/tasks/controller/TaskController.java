@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/v1/tasks")
 @RequiredArgsConstructor
@@ -32,7 +33,7 @@ public class TaskController {
     @DeleteMapping(value = "{taskId}")
     public ResponseEntity<Void> deleteTask(@PathVariable Long taskId){
             service.deleteTask(taskId);
-        return null;
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping
