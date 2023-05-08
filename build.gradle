@@ -32,6 +32,7 @@ dependencies {
 	testImplementation 'com.google.code.gson:gson:2.10.1'
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.15'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 }
 
 tasks.named('test') {
